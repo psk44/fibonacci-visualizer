@@ -1,0 +1,50 @@
+<!-- frontend/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence Visualizer</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fibonacci Sequence Visualizer</h1>
+        
+        <div class="controls">
+            <div class="input-group">
+                <label for="terms">Number of Terms:</label>
+                <input type="number" id="terms" min="2" max="50" value="10">
+            </div>
+            
+            <div class="input-group">
+                <label for="visualType">Visualization Type:</label>
+                <select id="visualType">
+                    <option value="line">Line Chart</option>
+                    <option value="bar">Bar Chart</option>
+                    <option value="spiral">Fibonacci Spiral</option>
+                </select>
+            </div>
+            
+            <button id="updateBtn">Update Visualization</button>
+        </div>
+
+        <div class="visualization">
+            <canvas id="fibChart"></canvas>
+            <div id="spiralContainer"></div>
+        </div>
+
+        <div class="sequence-display">
+            <h3>Sequence:</h3>
+            <div id="sequenceNumbers"></div>
+        </div>
+
+        <div class="ratio-display">
+            <h3>Golden Ratio Approximations:</h3>
+            <div id="ratioNumbers"></div>
+        </div>
+    </div>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
